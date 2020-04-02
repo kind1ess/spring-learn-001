@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.kind1ess.entity.Student">
+        <property name="id" value="32313"></property>
+        <property name="age" value="23"></property>
+        <property name="name" value="张三"></property>
+        <property name="score" value="35"></property>
+        <property name="birthday" ref="date"></property>
+    </bean>
+
+    <bean id="teacher" class="com.kind1ess.entity.Teacher">
+        <property name="stringList">
+            <list value-type="java.lang.String">
+                <value type="java.lang.String">hello</value>
+                <value type="java.lang.String">world</value>
+                <value type="java.lang.String">hello</value>
+                <value type="java.lang.String">spring</value>
+            </list>
+        </property>
+        <property name="map">
+            <map key-type="java.lang.String" value-type="java.lang.String">
+                <entry key="张三" value="16"></entry>
+                <entry key="李四" value="22"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="date" class="java.util.Date"></bean>
+</beans>
